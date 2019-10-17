@@ -28,7 +28,7 @@ pipeline {
                            }
                            else if(ENVIRONMENT == 'PREPROD') {
                                 sh 'sshpass -p "PreUser" scp target/Ghama.war PreUser@172.17.0.3:/home/PreUser/Pragati/apache-tomcat-8.5.43/webapps'
-                                sh 'sshpass -p "PreUser" ssh PreUser@172.17.0.3 "JAVA_HOME=/home/PreUser/Pragati/jdk1.8.0_221" "/home/PreUser/Pragati/apache-tomcat-8.5.43/bin/startup.sh"
+                                sh 'sshpass -p "PreUser" ssh PreUser@172.17.0.3 "JAVA_HOME=/home/PreUser/Pragati/jdk1.8.0_221" "/home/PreUser/Pragati/apache-tomcat-8.5.43/bin/startup.sh" '
                            }
                          }
                       }
